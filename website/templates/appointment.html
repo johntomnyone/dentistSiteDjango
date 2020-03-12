@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta_description %}Book an appointment to contact me{% endblock %}
+{% block title %}Dr. Tom Johnson website - Contact page {% endblock %}
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+{% block content %}
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url(/static/website/img/bg-img/12.jpg?{% now 'U' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Set aapointment</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+  <br/><br/><br/>
+ <center>
+  <h1>Review your information</h1>
+   <table class='table'>
+    <thead>
+      <tr>
+          <th>Name</th>
+          <td>
+            {{ your_name }}
+          </td>
+      </tr>
+      <tr>
+          <th>Phone</th>
+          <td>
+            {{ your_phone }}
+          </td>
+      </tr>
+      <tr>
+          <th>Email</th>
+          <td>
+            {{ your_email }}
+          </td>
+      </tr>
+      <tr>
+          <th>address</th>
+          <td>
+            {{ your_address }}
+          </td>
+      </tr>
+      <tr>
+          <th>Schedule</th> 
+          <td>
+            {{ your_schedule }}
+          </td>
+      </tr>
+      <tr>
+          <th>Day</th>
+          <td>
+            {{ your_day }}
+          </td>
+      </tr>
+      <tr>
+          <th>Message</th>
+          <td>
+            {{ your_message }}
+          </td> 
+      </tr>
+    </thead>
+   </table>
+
+ </center>
+
+ <br/><br/><br/><br/>
+ <center>
+  <strong>Note:</strong><span>We have received your application, and we will get in touch with you soon for appointment booking</span>
+ </center>
+  <br/><br/><br/><br/>
+  
+  {% endblock %}
